@@ -1,25 +1,20 @@
-def isPhoneNumber(text):
-        if len(text) != 12:
-                return False
-        for i in range(0, 3):
-                if not text[i].isdecimal():
-                        return False
-        if text[3] != '-':
-                return False
-        for i in range(4, 7):
-                if not text[i].isdecimal():
-                        return False
-        if text[7] != '-':
-                return False
-        for i in range(8, 12):
-                if not text[i].isdecimal():
-                        return False
-        return True
-
-
-message = 'Call me at 415-555-1011 tomorrow. 415-555-9999 is my office.'
-for i in range(len(message)):
-        chunk = message[i:i+12]
-        if isPhoneNumber(chunk):
-                print('Phone number found: ' + str(chunk))
-print('Done')
+#!/usr/local/bin/python3.6
+import random
+# The quiz data. Keys are states and values are their capitals.
+capitals = {'Alabama': 'Montgomery', 'Alaska': 'Juneau', 'Arizona': 'Phoenix',
+'Arkansas': 'Little Rock', 'California': 'Sacramento', 'Colorado': 'Denver',
+'Connecticut': 'Hartford', 'Delaware': 'Dover', 'Florida': 'Tallahassee',
+'Georgia': 'Atlanta', 'Hawaii': 'Honolulu', 'Idaho': 'Boise', 'Illinois':
+'Springfield', 'Indiana': 'Indianapolis', 'Iowa': 'Des Moines', 'Kansas':
+'Topeka', 'Kentucky': 'Frankfort', 'Louisiana': 'Baton Rouge', 'Maine':
+'Augusta', 'Maryland': 'Annapolis', 'Massachusetts': 'Boston', 'Michigan':
+'Lansing', 'Minnesota': 'Saint Paul', 'Mississippi': 'Jackson', 'Missouri':
+'Jefferson City', 'Montana': 'Helena', 'Nebraska': 'Lincoln', 'Nevada':
+'Carson City', 'New Hampshire': 'Concord', 'New Jersey': 'Trenton', 'New
+'Mexico': 'Santa Fe', 'New York': 'Albany', 'North Carolina': 'Raleigh',
+'North Dakota': 'Bismarck', 'Ohio': 'Columbus', 'Oklahoma': 'Oklahoma City',
+'Oregon': 'Salem', 'Pennsylvania': 'Harrisburg', 'Rhode Island': 'Providence',
+'South Carolina': 'Columbia', 'South Dakota': 'Pierre', 'Tennessee':
+'Nashville', 'Texas': 'Austin', 'Utah': 'Salt Lake City', 'Vermont':
+'Montpelier', 'Virginia': 'Richmond', 'Washington': 'Olympia', 'West Virginia': 'Charleston',
+'Wisconsin': 'Madison', 'Wyoming': 'Cheyenne'}
