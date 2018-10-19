@@ -35,7 +35,7 @@ for quizNum in range(35):
         states = list(capitals.keys())
         random.shuffle(states)
 
-    # Loop through all 50 states, making a question for each.
+        # Loop through all 50 states, making a question for each.
         for questionNum in range(50):
 
             # Get right and wrong answers.
@@ -54,5 +54,5 @@ for quizNum in range(35):
 
             # Write the answer key to a file.
             answerKeyFile.write('%s. %s\n' % (questionNum + 1, 'ABCD'[answerOptions.index(correctAnswer)]))
-quizFile.close()
-answerKeyFile.close()
+        quizFile.close()
+        answerKeyFile.close()
