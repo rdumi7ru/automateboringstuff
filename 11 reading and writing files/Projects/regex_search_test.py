@@ -1,17 +1,11 @@
 #!/usr/bin/python3
 
-<<<<<<< HEAD
 #directory searcher: searches through a directory for text files and looks for what files contain a given regular expression
 #Usage: python dirsearch.py <regexpression> <directory>
  
 import sys, os, re
  
 os.chdir('/home/razvan/python')
-=======
-import sys, os, re
- 
- 
->>>>>>> 42dc6abbddc53cbf4249344fc89e0805dfab7ea5
  
 #TODO: GET COMMAND LINE ARGUMENTS 
 if len(  sys.argv  ) >= 2:
@@ -55,8 +49,4 @@ if len(  sys.argv  ) >= 2:
                     for result in results:
                               print(result)
 else:
-<<<<<<< HEAD
           print("Usage: python dirsearch.py <regexpression> <directory>(optional)")
-=======
-          print("Usage: python dirsearch.py <regexpression> <directory>(optional)")
->>>>>>> 42dc6abbddc53cbf4249344fc89e0805dfab7ea5

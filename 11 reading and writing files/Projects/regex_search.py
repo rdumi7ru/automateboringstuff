@@ -3,13 +3,15 @@
 import os
 import re
 
-os.chdir('/home/razvan/python')
+try:
+    os.chdir('/home/razvan/python')
+except:
+    print('\t')
 regex = input(('Enter the patern:\n'))
 regexSearch = re.compile(regex, re.I)
 directory = input('Enter a directory name:\n')
 dir = os.path.abspath(directory)
 if os.path.exists(dir) == True:
-    print(dir + ' folder exists')
     allFiles = os.listdir(dir)
     results = []
     for file in allFiles:
@@ -24,7 +26,7 @@ if os.path.exists(dir) == True:
             results.append(holder)
             content.close()
     for result in results:
-        print(result)
+        print(' '.join(result))
 else:
     print('Folder ' + os.path.basename(dir) + ' does not exist!')
 # result = regexSearch.findall()
