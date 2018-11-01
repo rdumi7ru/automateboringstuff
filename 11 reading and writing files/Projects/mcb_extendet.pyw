@@ -1,4 +1,4 @@
-#!/usr/bin/python3.4
+#!/usr/bin/python3
 # mcb.pyw - Saves and loads pieces of text to the clipboard.
 # Usage: python3.4 mcb_extendet.pyw save <keyword> - Saves clipboard to keyword.
 #        python3.4 mcb_extendet.pyw <keyword> - Loads keyword to clipboard.
