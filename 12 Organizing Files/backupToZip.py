@@ -29,4 +29,7 @@ def backupToZip(folder):
         # Add the current folder to the ZIP file.
         backupZip.write(folderName)
         
+        # Add all the filles in this folder to the ZIP file.
+        for filename in filenames:
+            
         
