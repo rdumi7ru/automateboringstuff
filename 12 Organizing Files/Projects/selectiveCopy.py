@@ -12,4 +12,5 @@ def selectiveCopy(folder):
         print('Searching for .txt and .jpg files in %s...' % (folderName))
         for filename in filenames:
             if filename.endswith('.jpg') and filenames.endswith('.txt'):
-                shutil.copy(os.path.join(folder, filename),)
+                shutil.copy(os.path.join(folder, filename),'/home/razvan/python/selectiveCopy2')
+                
