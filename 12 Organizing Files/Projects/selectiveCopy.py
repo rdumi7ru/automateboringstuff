@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 import os
 import shutil
@@ -13,7 +13,7 @@ def selectiveCopy(folder, destFolder):
         print('Searching for .txt and .jpg files in %s...' % (folderName))
         for filename in filenames:
 
-            if filename.endswith('.jpg') and filenames.endswith('.txt'):
+            if filename.endswith('.jpg') or filename.endswith('.txt'):
                 print('Copying %s from %s to %s' % (filename, folder, destFolder))
                 shutil.copy(os.path.join(folder, filename), destFolder)
                 
