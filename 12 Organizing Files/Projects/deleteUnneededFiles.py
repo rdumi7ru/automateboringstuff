@@ -3,17 +3,16 @@
 # It asks user to confirm
 
 import os
-import shutil
 import sys
-import send2trash
+from send2trash import send2trash
 import bytesConvertor
 
 def dele(dir):
-    dir = '/home/dmr/python/deleteUnneededFiles'
+    dir = '/home/dmr/python/OrganisingFiles/deleteUnneededFiles'
     if os.path.exists(dir):
-        print('folder %s exists.' % (dir))
+        print('Folder %s exists.' % (dir))
     else:
-        print('%s folder does not exist, exiting...' % (dir))
+        print('%s Folder does not exist, exiting...' % (dir))
         sys.exit()
     for folderName, subFolders, filenames in os.walk(dir):
         print("Searching for files bigger that 500MB")
@@ -22,7 +21,7 @@ def dele(dir):
             size = bytesConvertor.btm(os.path.getsize(file))
             if size >= 500:
                 print('Deleting %s file' % (filename))
-                send2trash.send2trash(file)
+                send2trash(file)
 
 if __name__ == '__main__':
     dele(dir)
