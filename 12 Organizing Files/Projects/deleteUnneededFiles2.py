@@ -19,4 +19,16 @@ def dele(dir):
     # Walk thru directories
     for dirName, subDirs, filenames in os.walk(dir):
         print('Searching for files larger than 500MB')
-        
+        for filename in filenames:
+            # file = os.path.join(dir, filename)
+            size = bytesConvertor.btm(os.path.getsize(filename))
+            reply = input('Delete filename: %s? [y/[n]]' % (filename))
+            if filename >= 500 and reply == ('y|Y|yes|Yes'):
+                print('Deleting file: %s' % (filename))
+                send2trash(filename)
+            else:
+                print('File: %s, will not be deleted' % (filename))
+                continue
+
+if __name__ == '__main__':
+    dele(dir)
