@@ -2,11 +2,8 @@
 # Deletes files that are larger than 500MB
 # Asks for your confirmation
 
-import os
-import sys
-import bytesConvertor
+import os, sys, bytesConvertor
 from send2trash import send2trash
-from pprint import pprint
 
 def dele(dir):
     dir = '/home/dmr/python/OrganisingFiles/deleteUnneededFiles'
