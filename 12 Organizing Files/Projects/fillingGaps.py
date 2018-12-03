@@ -8,4 +8,14 @@ import os, re
 def gaps(dir):
     dir = '/home/razvan/python/12OrganisingFiles/fillingGaps'
 
-    regex = re.compile(r'^(\w.*)(d.*)()')
+    regex = re.compile(r'^(spam)(d+)(.txt)')
+
+    lst = []
+
+    for file in os.listdir(dir):
+        num = regex.search(file).group(2)
+        lst.append( (int(num.lstrip('0')), file, len(num)) )
+
+    lst = sorted(lst)
+    
+    
