@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-# Deletes files that are larger than 100MB
-# It asks user to confirm
+# Deletes files that are larger than 500MB
 
 import os
 import sys
