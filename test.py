@@ -1,13 +1,12 @@
-import shelve
+#!/usr/bin/python3
 
-key = input(('Enter the keyword:\n'))
+import os, sys
 
-shelfFile = shelve.open('/home/razvan/python/filename')
-shelfFile['cats'] = ['Pooka', 'Simon']
-shelfFile['dogs'] = ['Ursu', 'Tookie']
+try:
+    os.chdir('home/razvan')
+except Exception as exc:
+    print('An error occurred: %s\nThe program will exit' % (exc))
 
-print(list(shelfFile.keys()))
-del shelfFile[key]
+    sys.exit()
 
-print(list(shelfFile.keys()))
-shelfFile.close()
+print('Hello')
