@@ -1,5 +1,3 @@
-# python
-Learning Python
+# Automate the boring stuff with python
 
 
-Started to learn python scripting.
