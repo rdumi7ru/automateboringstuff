@@ -19,9 +19,13 @@ while not url.endswith('#'):
     if comicElem == []:
         print('Could not find image.')
     else:
-        comicUrl = 'http:' + 
-    # TODO: Download the image.
-    # TODO: Save the image to ./xkcd
+        comicUrl = 'http:' + comicElem[0].get('src') 
+    # Download the image.
+        print('Downloading image %s...' % (comicUrl))
+        res = requests.get(comicUrl)
+        res.raise_for_status()
+    # Save the image to ./xkcd
+    imageFile = open(os.path.join('xkcd', os.path.basename(comicUrl)), 'wb')
     # TODO: Get the Prev button's url.
 
 print('Done.')
