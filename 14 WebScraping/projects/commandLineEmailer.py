@@ -22,17 +22,21 @@ if len(sys.argv) != 3:
 else:
     email = sys.argv[1]
     message = sys.argv[2]
-    password = '2015@Hamjkcna1985'
+    password = 'your_password'
 
 logging.debug('The email address is "%s" and the message is "%s"' % (email, message))
 
+# Select Firefox driver, and create the structure. 
 browser = webdriver.Firefox()
 browser.get('https://mail.google.com/mail')
 uElem = browser.find_element_by_id('identifierId').send_keys(email)
 nElem = browser.find_element_by_id('identifierNext').click()
-WebDriverWait(browser, 10).until(EC.presence_of_element_located((By.XPATH, "//[@type='password']")))
-WebDriverWait(browser, 10).until(EC.visibility_of_element_located((By.XPATH, "//[@type='password']")))
+WebDriverWait(browser, 10).until(EC.presence_of_element_located((By.XPATH, "//input[@type='password']")))
+WebDriverWait(browser, 10).until(EC.visibility_of_element_located((By.XPATH, "//input[@type='password']")))
 pElem = browser.find_element_by_xpath("//*[@name='password']").send_keys(password)
+fElem = browser.find_element_by_id('passwordNext').click()
+WebDriverWait(browser, 10).until(EC.visibility_of_element_located((By.CLASS_NAME, "T-I.J-J5-Ji.T-I-KE.L3")))
+cElem = browser.find_element_by_css_selector('.T-I.J-J5-Ji.T-I-KE.L3').click()
 
 
 

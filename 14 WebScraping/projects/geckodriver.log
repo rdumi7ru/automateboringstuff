@@ -6,3 +6,75 @@ console.log: Accessibility service init or shutdown observer does not exist.
 ###!!! [Parent][MessageChannel] Error: (msgtype=0x160080,name=PBrowser::Msg_Destroy) Closed channel: cannot send/recv
 
 *** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1550042724518	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.kA40zqrKyLnh"
+1550042726385	Marionette	INFO	Listening on port 37328
+1550042726443	Marionette	WARN	TLS certificate errors will be ignored for this session
+1550042902430	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.ntZlxoS9KIAx"
+1550042904362	Marionette	INFO	Listening on port 38578
+1550042904442	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.log: Accessibility service init or shutdown observer does not exist.
+1550043504525	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.SPTVHU0dLRix"
+1550043506360	Marionette	INFO	Listening on port 46422
+1550043506436	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+** (firefox:24172): WARNING **: No marshaller for signature of signal 'PropertiesChanged'
+console.log: Accessibility service init or shutdown observer does not exist.
+Handler function NetworkEventActorProxy.addSecurityInfo threw an exception: [Exception... "Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIMessageSender.sendAsyncMessage]"  nsresult: "0xc1f30001 (NS_ERROR_NOT_INITIALIZED)"  location: "JS frame :: resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js :: NetworkEventActorProxy.methodFactory/< :: line 1875"  data: no]
+Stack: NetworkEventActorProxy.methodFactory/<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:1875:5
+exports.makeInfallible/<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/ThreadSafeDevToolsUtils.js:109:14
+NetworkResponseListener.prototype._getSecurityInfo<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:521:5
+exports.makeInfallible/<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/ThreadSafeDevToolsUtils.js:109:14
+onStartRequest@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:441:5
+Line: 1875, column: 0
+console.error: "Handler function NetworkEventActorProxy.addSecurityInfo threw an exception: [Exception... \"Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIMessageSender.sendAsyncMessage]\"  nsresult: \"0xc1f30001 (NS_ERROR_NOT_INITIALIZED)\"  location: \"JS frame :: resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js :: NetworkEventActorProxy.methodFactory/< :: line 1875\"  data: no]\nStack: NetworkEventActorProxy.methodFactory/<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:1875:5\nexports.makeInfallible/<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/ThreadSafeDevToolsUtils.js:109:14\nNetworkResponseListener.prototype._getSecurityInfo<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:521:5\nexports.makeInfallible/<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/ThreadSafeDevToolsUtils.js:109:14\nonStartRequest@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:441:5\nLine: 1875, column: 0"
+Handler function NetworkEventActorProxy.addResponseContent threw an exception: [Exception... "Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIMessageSender.sendAsyncMessage]"  nsresult: "0xc1f30001 (NS_ERROR_NOT_INITIALIZED)"  location: "JS frame :: resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js :: NetworkEventActorProxy.methodFactory/< :: line 1875"  data: no]
+Stack: NetworkEventActorProxy.methodFactory/<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:1875:5
+exports.makeInfallible/<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/ThreadSafeDevToolsUtils.js:109:14
+_onComplete@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:651:5
+onStreamClose@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:600:7
+onInputStreamReady@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:702:7
+Line: 1875, column: 0
+console.error: "Handler function NetworkEventActorProxy.addResponseContent threw an exception: [Exception... \"Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIMessageSender.sendAsyncMessage]\"  nsresult: \"0xc1f30001 (NS_ERROR_NOT_INITIALIZED)\"  location: \"JS frame :: resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js :: NetworkEventActorProxy.methodFactory/< :: line 1875\"  data: no]\nStack: NetworkEventActorProxy.methodFactory/<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:1875:5\nexports.makeInfallible/<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/ThreadSafeDevToolsUtils.js:109:14\n_onComplete@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:651:5\nonStreamClose@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:600:7\nonInputStreamReady@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:702:7\nLine: 1875, column: 0"
+Handler function NetworkEventActorProxy.addResponseContent threw an exception: [Exception... "Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIMessageSender.sendAsyncMessage]"  nsresult: "0xc1f30001 (NS_ERROR_NOT_INITIALIZED)"  location: "JS frame :: resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js :: NetworkEventActorProxy.methodFactory/< :: line 1875"  data: no]
+Stack: NetworkEventActorProxy.methodFactory/<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:1875:5
+exports.makeInfallible/<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/ThreadSafeDevToolsUtils.js:109:14
+_onComplete@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:651:5
+onStreamClose@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:600:7
+onInputStreamReady@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:702:7
+Line: 1875, column: 0
+console.error: "Handler function NetworkEventActorProxy.addResponseContent threw an exception: [Exception... \"Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIMessageSender.sendAsyncMessage]\"  nsresult: \"0xc1f30001 (NS_ERROR_NOT_INITIALIZED)\"  location: \"JS frame :: resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js :: NetworkEventActorProxy.methodFactory/< :: line 1875\"  data: no]\nStack: NetworkEventActorProxy.methodFactory/<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:1875:5\nexports.makeInfallible/<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/ThreadSafeDevToolsUtils.js:109:14\n_onComplete@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:651:5\nonStreamClose@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:600:7\nonInputStreamReady@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:702:7\nLine: 1875, column: 0"
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 201: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 201: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 201: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 201: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 201: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 201: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 201: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 201: TypeError: this.win is null
+1550044716822	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.hcSApS9Ol8uu"
+1550044718646	Marionette	INFO	Listening on port 40816
+1550044718743	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.log: Accessibility service init or shutdown observer does not exist.
+Handler function NetworkEventActorProxy.addResponseContent threw an exception: [Exception... "Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIMessageSender.sendAsyncMessage]"  nsresult: "0xc1f30001 (NS_ERROR_NOT_INITIALIZED)"  location: "JS frame :: resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js :: NetworkEventActorProxy.methodFactory/< :: line 1875"  data: no]
+Stack: NetworkEventActorProxy.methodFactory/<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:1875:5
+exports.makeInfallible/<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/ThreadSafeDevToolsUtils.js:109:14
+_onComplete@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:651:5
+onStreamClose@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:600:7
+onInputStreamReady@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:702:7
+Line: 1875, column: 0
+console.error: "Handler function NetworkEventActorProxy.addResponseContent threw an exception: [Exception... \"Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIMessageSender.sendAsyncMessage]\"  nsresult: \"0xc1f30001 (NS_ERROR_NOT_INITIALIZED)\"  location: \"JS frame :: resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js :: NetworkEventActorProxy.methodFactory/< :: line 1875\"  data: no]\nStack: NetworkEventActorProxy.methodFactory/<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:1875:5\nexports.makeInfallible/<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/ThreadSafeDevToolsUtils.js:109:14\n_onComplete@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:651:5\nonStreamClose@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:600:7\nonInputStreamReady@resource://devtools/shared/base-loader.js -> resource://devtools/shared/webconsole/network-monitor.js:702:7\nLine: 1875, column: 0"
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 201: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 201: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 201: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 201: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 201: TypeError: this.win is null
+JavaScript error: resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/highlighters/auto-refresh.js, line 201: TypeError: this.win is null
+1550046273904	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.t1T8NyHVGhuh"
+1550046275787	Marionette	INFO	Listening on port 43897
+1550046275818	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.log: Accessibility service init or shutdown observer does not exist.
+1550046367124	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.qoh99sb6dsFu"
+1550046368921	Marionette	INFO	Listening on port 41808
+1550046368934	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+** (firefox:553): WARNING **: No marshaller for signature of signal 'PropertiesChanged'
