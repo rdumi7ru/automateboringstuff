@@ -5,6 +5,7 @@
 # an email.
 
 import sys
+import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -37,7 +38,10 @@ pElem = browser.find_element_by_xpath("//*[@name='password']").send_keys(passwor
 fElem = browser.find_element_by_id('passwordNext').click()
 WebDriverWait(browser, 10).until(EC.visibility_of_element_located((By.CLASS_NAME, "T-I.J-J5-Ji.T-I-KE.L3")))
 cElem = browser.find_element_by_css_selector('.T-I.J-J5-Ji.T-I-KE.L3').click()
-
-
+WebDriverWait(browser, 10).until(EC.visibility_of_element_located((By.TAG_NAME, "textarea")))
+eElem = browser.find_element_by_name('to').send_keys('razvan.dumitru@protonmail.com')
+sElem = browser.find_element_by_id (':8y').send_keys('test')
+mElem = browser.find_element_by_id(':a3').send_keys('test')
+tElem = browser.find_element_by_class_name('T-I.J-J5-Ji.aoO.T-I-atl.L3').click()
 
 logging.debug('End of program')
