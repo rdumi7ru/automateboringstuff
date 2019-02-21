@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # imageSiteDownloader.py downloads images from flickr.com
 
-import requests, bs4, os, logging
+import requests, bs4, os, logging, json
 
 # Set up logging
 logging.basicConfig(level=logging.DEBUG, format=' %(asctime)s - %(levelname)s - %(message)s')
@@ -20,6 +20,10 @@ elif os.path.exists(work):
 
 # Get user input of what it needs to search
 userInput = input('Please Enter a Category: ')
+prefixUrl = 'https://unsplash.com/napi/search/photos?query='
+ext = '&xp=&per_page=20&page='
+pageNum = 1
+for 
 url = ('https://flickr.com/search/?text=' + userInput)
 
 res = requests.get(url)
