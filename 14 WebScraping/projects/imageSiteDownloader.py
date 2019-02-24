@@ -8,7 +8,7 @@ logging.basicConfig(level=logging.DEBUG, format=' %(asctime)s - %(levelname)s - 
 
 logging.debug('Start of the program')
 # Check if the path exists
-home = '/home/dmr/python/WebScraping/Projects'
+home = '/home/dmr/python/webscraping/unsplash'
 work = '/home/razvan/python/WebScraping/Projects'
 
 if os.path.exists(home):
@@ -24,11 +24,17 @@ prefixUrl = 'https://unsplash.com/napi/search/photos?query='
 ext = '&xp=&per_page=20&page='
 url = (prefixUrl + userInput + ext)
 pageNum = 1
-res = requests.get(url)
-try:
-    res.raise_for_status()
-except Exception as exc:
+while pageNum < 100:
+    res = requests.get(url)
+    try:
+        res.raise_for_status()
+    except Exception as exc:
     print('There was a problem %s' % (exc))
+    res = requests.get(url)
+    jD = json.loads(res.text)
+    for img in jD['results'][img]['urls']['raw']:
+        
+        with open()
 logging.debug('The page is %s' % (res))
 
 soap = bs4.BeautifulSoup(res.text)
