@@ -22,10 +22,8 @@ elif os.path.exists(work):
 userInput = input('Please Enter a Category: ')
 prefixUrl = 'https://unsplash.com/napi/search/photos?query='
 ext = '&xp=&per_page=20&page='
+url = (prefixUrl + userInput + ext)
 pageNum = 1
-for 
-url = ('https://flickr.com/search/?text=' + userInput)
-
 res = requests.get(url)
 try:
     res.raise_for_status()
