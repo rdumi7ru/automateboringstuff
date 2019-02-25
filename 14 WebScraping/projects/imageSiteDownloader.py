@@ -25,16 +25,24 @@ ext = '&xp=&per_page=20&page='
 url = (prefixUrl + userInput + ext)
 pageNum = 1
 while pageNum < 100:
-    res = requests.get(url)
+    res = requests.get(url + pageNum)
     try:
         res.raise_for_status()
     except Exception as exc:
-    print('There was a problem %s' % (exc))
-    res = requests.get(url)
+       print('There was a problem %s' % (exc))
     jD = json.loads(res.text)
-    for img in jD['results'][img]['urls']['raw']:
-        
-        with open()
+    for i in range(0, 20):
+        name = jD['results'][i]['description']
+        if name == None:
+            continue
+        name = name = name = jD['results'][i]['description'] + '.png'
+#        img = jD['results'][i]['raw']
+        img = requests.get(jD['results'][i]['urls']['raw'])
+        imageFile = open(name, 'wb')
+        for chunk in img.iter_content(100000):
+            imageFile.write(chunk)
+        imageFile.close()
+#        with open(name, 'wb') as writeFile:
+#            json.dump(img, writeFile)
+    pageNum += 1
 logging.debug('The page is %s' % (res))
-
-soap = bs4.BeautifulSoup(res.text)
