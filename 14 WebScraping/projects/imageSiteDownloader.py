@@ -36,6 +36,7 @@ while pageNum < 100:
         if name == None:
             continue
         name = name = name = jD['results'][i]['description'] + '.png'
+        logging.debug('Downloading %s' % (name))
 #        img = jD['results'][i]['raw']
         img = requests.get(jD['results'][i]['urls']['raw'])
         imageFile = open(name, 'wb')
@@ -45,4 +46,3 @@ while pageNum < 100:
 #        with open(name, 'wb') as writeFile:
 #            json.dump(img, writeFile)
     pageNum += 1
-logging.debug('The page is %s' % (res))
