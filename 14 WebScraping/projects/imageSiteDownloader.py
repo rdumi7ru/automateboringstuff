@@ -9,7 +9,7 @@ logging.basicConfig(level=logging.DEBUG, format=' %(asctime)s - %(levelname)s - 
 logging.debug('Start of the program')
 # Check if the path exists
 home = '/home/dmr/python/webscraping/unsplash'
-work = '/home/razvan/python/WebScraping/Projects'
+work = '/home/razvan/python/WebScraping/Projects/imageSiteDownloader'
 
 if os.path.exists(home):
     os.chdir(home)
@@ -23,9 +23,10 @@ userInput = input('Please Enter a Category: ')
 prefixUrl = 'https://unsplash.com/napi/search/photos?query='
 ext = '&xp=&per_page=20&page='
 url = (prefixUrl + userInput + ext)
+numPage = input('Please enter the number of pages you want to download.\nThere are 20 images on page: ')
 pageNum = 1
-while pageNum < 100:
-    res = requests.get(url + pageNum)
+while pageNum <= int(numPage):
+    res = requests.get(url + str(pageNum))
     try:
         res.raise_for_status()
     except Exception as exc:
@@ -35,14 +36,11 @@ while pageNum < 100:
         name = jD['results'][i]['description']
         if name == None:
             continue
-        name = name = name = jD['results'][i]['description'] + '.png'
+        name = '_'.join(name.split()) + '.jpg'
         logging.debug('Downloading %s' % (name))
-#        img = jD['results'][i]['raw']
         img = requests.get(jD['results'][i]['urls']['raw'])
         imageFile = open(name, 'wb')
         for chunk in img.iter_content(100000):
             imageFile.write(chunk)
         imageFile.close()
-#        with open(name, 'wb') as writeFile:
-#            json.dump(img, writeFile)
     pageNum += 1
