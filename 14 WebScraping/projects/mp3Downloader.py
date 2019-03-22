@@ -16,5 +16,3 @@ dictOfWords
 dictOfWords = json.dumps(dictOfWords)
 loadedDictOfWords = json.loads(dictOfWords)
 loadedDictOfWords
-a
-a
